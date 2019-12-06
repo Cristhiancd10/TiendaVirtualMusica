@@ -1,0 +1,46 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html"> 
+
+<h:head>
+	<center>
+		<h1 style="color: red">Ingreso de docentes</h1>
+		<h1 style="color: black">Realizado por: Cristhian Cabrera</h1>
+	</center>
+</h:head> 
+<body> 
+<h:form>
+	<center>
+		<h:panelGrid columns="3">
+		
+			<h:outputText value="Id:" />
+			<h:inputText value="#{docenteController.docente.placa}"  id="txtCodigo"/>
+			<h:message for="txtCodigo"/>
+			
+			<h:outputText value="Cedula:" />
+			<h:inputText value="#{docenteController.docente.marca}"  id="txtCedula"/>
+			<h:message for="txtCedula"/>
+			
+						
+			<h:outputText value="nu:" />
+			<h:inputText value="#{docenteController.docente.actividades.numero}"  id="txtnu"/>
+			<h:message for="txtnu"/>
+			
+			<h:outputText value="Ced:" />
+			<h:inputText value="#{docenteController.docente.actividades.tiempo}"  id="txtCed"/>
+			<h:message for="txtCed"/>
+			
+			
+			
+		<h:commandButton action="#{docenteController.cargarDatos()}" value="Guardar" />
+	</h:panelGrid>
+	
+			<h:commandButton action="#{docenteController.cargarDatos()}" value="Guardar" />
+			<h:commandButton action="Listar" immediate="true" value="Listar" />
+		
+	</center>
+</h:form>
+</body> 
+</html>
